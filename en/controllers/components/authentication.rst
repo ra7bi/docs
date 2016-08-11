@@ -190,7 +190,7 @@ authenticate a user, such as ``username`` and ``password``::
     public function findAuth(\Cake\ORM\Query $query, array $options)
     {
         $query
-            ->select(['id', 'username', 'password'])
+            ->select(['id', 'username', 'password','active'])
             ->where(['Users.active' => 1]);
 
         return $query;
